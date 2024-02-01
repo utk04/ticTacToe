@@ -86,6 +86,7 @@ function checkgameover(){
     
     if(count === 9){
         Player.innerText = `TIED!`;
+        gamebtn.classList.add("active");
         
      }
 }
