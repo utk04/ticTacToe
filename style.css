@@ -79,3 +79,9 @@ body{
 .win{
     background-color: green;
 }
+ @media only screen and (max-width: 395px){
+.playername{
+    font-size: smaller;
+    padding: 0.5rem 1.5rem;
+}
+} 
