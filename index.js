@@ -1,3 +1,4 @@
+let t1 = performance.now();
 const Player = document.querySelector(".playername");
 const Box = document.querySelectorAll(".box");
 const gamebtn = document.querySelector(".btn");
@@ -43,7 +44,7 @@ else{
 Player.innerText = `player-turn ${currentPlayer}`;
 }
 
-//check if game is over 
+//game khatam hua ki nhi 
 
 function checkgameover(){
      let answer = "";
@@ -76,7 +77,7 @@ function checkgameover(){
     }
     
     // if game is tied
-    
+    else{
     let count = 0;
     gamegrid.forEach((box) => {
         if(box != ""){
@@ -89,11 +90,12 @@ function checkgameover(){
         gamebtn.classList.add("active");
         
      }
+    }
 }
 
 // audio effect
 function music(){
-    let bjao = new Audio("click.aac");
+    let bjao = new Audio("newchess.aac");
     bjao.play();
 }
 
@@ -127,3 +129,6 @@ Box.forEach((box, index) => {
         music(); // Move this line here to play the audio on each click
     });
 });
+let t2 = performance.now();
+
+console.log(t2-t1);
