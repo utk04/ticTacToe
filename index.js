@@ -89,8 +89,9 @@ function checkgameover(){
         Player.innerText = `TIED!`;
         gamebtn.classList.add("active");
         
-     }
+
     }
+}
 }
 
 // audio effect
@@ -106,12 +107,14 @@ function clickhandel(index){
         Box[index].innerHTML = currentPlayer;
         gamegrid[index] = currentPlayer; 
         Box[index].style.pointerEvents = "none";
+        gamebtn.classList.add("active");
         // Box.addEventListener("click" , music);
 
         // swap turn
         swapturn();
         //koi jeet to nhi gya
         checkgameover();
+        music();
     }
 }
 
@@ -126,7 +129,6 @@ gamebtn.addEventListener("click" , instgame);
 Box.forEach((box, index) => {
     box.addEventListener("click", () => {
         clickhandel(index);
-        music(); // Move this line here to play the audio on each click
     });
 });
 let t2 = performance.now();
