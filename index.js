@@ -96,7 +96,7 @@ function checkgameover(){
 
 // audio effect
 function music(){
-    let bjao = new Audio("newchess.aac");
+    let bjao = new Audio("click.aac");
     bjao.play();
 }
 
